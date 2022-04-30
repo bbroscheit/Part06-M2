@@ -12,6 +12,11 @@
       padding:0 15px;
     }
 
+    img{
+      margin:8px 0px;
+      border-radius: 20px;
+    }
+
   }
 
   .music-images {
@@ -58,6 +63,13 @@
       }
 
       .btn {
+        .register(@btn-bg-color, fit-content);
+        cursor: pointer;
+        transition: backgrund-color, 0.5s;
+        &:hover{
+          background-color: @shuttle-gray;
+
+        }
       }
     }
 
@@ -69,6 +81,19 @@
         width: 100%;
         height: auto;
         border-radius: 10px;
+      }
+    }
+  }
+}
+
+@media @phone{
+  .home{
+    .intro{
+      @margin : 4px;
+      img{
+        width: calc(100% - 8px);
+        border-radius: 8px;
+        margin: @margin;
       }
     }
   }

@@ -160,6 +160,34 @@ p {
   width: 100%;
   margin: 0 auto;
 }
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 16px;
+  background-color: #F6F6F6;
+  border-bottom: solid 2px #F1F1F1;
+  color: #454A59;
+}
+nav ul {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  font-size: 16px;
+}
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #454A59;
+}
+@media (max-width : 500px) {
+  nav ul {
+    gap: 0px;
+    justify-content: space-around;
+  }
+}
 footer {
   color: #22283B;
   background: #f4f4f4;
@@ -175,6 +203,10 @@ footer {
 }
 .home .intro p {
   padding: 0 15px;
+}
+.home .intro img {
+  margin: 8px 0px;
+  border-radius: 20px;
 }
 .home .music-images {
   display: flex;
@@ -212,6 +244,19 @@ footer {
 .home .actual .actual-text p {
   margin-bottom: 26px;
 }
+.home .actual .actual-text .btn {
+  background-color: #22283A;
+  width: fit-content;
+  color: #F6F6F6;
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: backgrund-color, 0.5s;
+}
+.home .actual .actual-text .btn:hover {
+  background-color: #5E6164;
+}
 .home .actual .actual-img {
   width: 46%;
   margin-left: 4%;
@@ -220,4 +265,11 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+@media (max-width : 500px) {
+  .home .intro img {
+    width: calc(100% - 8px);
+    border-radius: 8px;
+    margin: 4px;
+  }
 }

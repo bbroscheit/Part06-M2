@@ -1,6 +1,6 @@
 // Crear un array vacío llamado 'toDoItems'
 // Tu codigo acá:
-
+let toDoItems = [];
 
 // En la página 'index.html' hay un elemento span cuyo texto es 'Aplicación creada por:'.
 // Usando querySelector seleccionar dicho span por su id ('createdBy') y luego usando innerHTML
@@ -18,7 +18,7 @@ text.textContent = 'Aplicación creada por Bernardo:'
 // 2) 'complete'    : debe setearse en false
 // Ayuda: usar 'this' en el constructor
 
-class ToDo {
+/*class ToDo {
   constructor(description) {
     // Tu código acá:
     this.description = description;
@@ -33,8 +33,18 @@ class ToDo {
       this.complete = true;
     }
   }
+}*/
+
+function ToDo(description) {
+  this.description = description;
+  this.complete = false;
 }
 
+ToDo.prototype.completeToDo = function () {
+  if(this.complete === false){
+    this.complete = true;
+  }
+}
 
 
 
@@ -127,13 +137,12 @@ function displayToDos() {
 function addToDo() {
   // Tu código acá:
 
-  let value = document.getElementById('toDoInput').value;
+  let value = document.getElementById('toDoInput');
   
-  let newToDo = new ToDo(value);
+  let newToDo = new ToDo(value.value);
   
   toDoItems.push(newToDo);
-  let input = getElementById('toDoInput');
-  input.value = "";
+  value.value = "";
 
   displayToDos();
 }
@@ -144,7 +153,8 @@ function addToDo() {
 //   2) Agregarle un 'click' event listener, pasándole la función 'addToDo' como callback
 
 // Tu código acá:
-document.getElementById('addButton').addEventListener("click", addToDo);
+let addBtn = document.getElementById('addButton');
+addBtn.addEventListener('click',addToDo)
 
 // La función completeToDo se va a ejecutar cuando queramos completar un todo
 // [NOTA: Algunas cuestiones a tener en cuenta
