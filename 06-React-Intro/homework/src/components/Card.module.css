@@ -1,0 +1,51 @@
+.container{
+    border: solid 1px;
+    border-color: grey;
+    border-radius: 2%;
+    padding: 8px;
+    /*height: 400px;*/
+    width: 350px;
+    margin:auto;
+
+
+}
+
+.btncontainer{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.btn{
+    
+    background-color: crimson;
+    color: white;
+    border:none;
+    border-radius: 20%;
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+
+}
+
+.titulo{
+    font-size: 26px;
+}
+
+.temp{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+
+}
+
+.subtitulo{
+    font-size: 20px;
+    margin-bottom:20px;
+}
+
+.subdato{
+    font-size: 18px;
+}
+

@@ -7,7 +7,7 @@ export default function SearchBar(props) {
   return <div>
           <input type="text" defaultValue="Que pais deseas buscar?"/>
           
-            <button onClick={() => props.onSearch("me tira undefined  ")}>Buscar</button>
+            <button type="submit" onClick={() => props.onSearch("me tira undefined  ")}>Buscar</button>
             
         </div>
 };

@@ -1,23 +1,29 @@
 import React from 'react';
+import styles from './Card.module.css';
 
 export default function Card(props) {
   // acá va tu código
   const {max, min, name, onClose, img} = props;
   //console.log(props)
   return  <div>
-
-            <button onClick={onClose}>X</button>
-            <h1>{name}</h1>
-            <div>
-              <h3>Min:</h3>
-              <h3>{min}</h3>
+            <div className={styles.container}>
+              <div className={styles.btncontainer}>
+                <button className={styles.btn} onClick={onClose}>X</button>
+              </div>
+              <h1 className={styles.titulo}>{name}</h1>
+              <div className={styles.temp}>
+                <div>
+                  <h3 className={styles.subtitulo}>Min:</h3>
+                  <h3 className={styles.subdato}>{min}</h3>
+                </div>
+                <div>
+                  <h3 className={styles.subtitulo}>Max:</h3>
+                  <h3 className={styles.subdato}>{max}</h3>
+                </div>
+                <div>
+                  <img src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt="" />
+                </div> 
+              </div>
             </div>
-            <div>
-              <h3>Max:</h3>
-              <h3>{max}</h3>
-            </div>
-            <div>
-              <img src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt="" />
-            </div>    
           </div>
 };

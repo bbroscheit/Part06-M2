@@ -32,7 +32,7 @@ Para nuestro ejercicio nosotros queremos ver lo siguiente:
 Vamos a tener que instalar `react-router-dom`. Para eso hacemos:
 
 ```shell
-npm install --save react-router-dom
+  npm install --save react-router-dom
 ```
 Cómo sabemos, lo primero que necesitamos es elegir un Wrapper.
 
